@@ -1,0 +1,26 @@
+<div class="container">
+<div class="input-prepend input-append">
+  <span class="add-on">Filter</span>
+  <input class="span2" id="filterList" type="text" ng-model="titleFilter" auto-complete titles="titles">
+</div>
+<table class="table table-hover">
+  <thead>
+  	<tr>
+  		<td>Title</td>
+      <td>Type</td>
+  		<td>Funding needs</td>
+  		<td>Limit Date</td>
+  		<td>Description</td>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr class="{{project.type | typeClass}}" ng-repeat="project in projects | filter:{title: titleFilter}" ng-click="goTo(project.title)">
+  		<td>{{project.title}}</td>
+      <td>{{project.type}}</td>
+  		<td>{{project.money | currency}}</td>
+  		<td>{{project.date | date:'longDate'}}</td>
+  		<td>{{project.description}}</td>
+  	</tr>
+  </tbody>
+</table>
+</div>

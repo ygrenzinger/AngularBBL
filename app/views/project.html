@@ -1,0 +1,14 @@
+<div class="container">
+	<div>
+		Title: {{project.title}}
+	</div>
+	<div>
+		Funding needs: {{project.money  | currency}}
+	</div>
+	<div>
+		Limit date: {{project.date | date:'longDate'}}
+	</div>
+	<div>
+		Description: {{project.description}}
+	</div>
+</div>

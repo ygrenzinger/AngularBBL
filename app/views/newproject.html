@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <form class="form-horizontal" name="newProject">
+        <div class="control-group">
+          <label class="control-label" for="projectTitle">
+            Project Title
+          </label>
+          <div class="controls">
+            <input type="text" id="projectTitle" placeholder="Project Title" ng-model="project.title"
+            required>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="projectTitle">
+            Project type
+          </label>
+          <div class="controls">
+            <select ng-model="project.type" ng-options="type for type in types">
+              <option value="">-- chose type --</option>
+            </select>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="fundingNeeds">
+            Funding needs
+          </label>
+          <div class="controls">
+            <input type="number" id="fundingNeeds" ng-model="project.money" min="1" required>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="limitDate">
+            Funding limit date
+          </label>
+          <div class="controls">
+            <input type="date" id="limitDate" ng-model="project.date" required>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="description">
+            Description
+          </label>
+          <div class="controls">
+            <textarea id="description" ng-model="project.description" placeholder="Present your project">
+            </textarea>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <button class="btn btn-primary" id="createProject" ng-click="submit()" ng-disabled="newProject.$invalid">
+              Create
+            </button>
+            <button class="btn" href="#/">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+      <div ng-show="errorMessage" class="alert alert-error">
+        Project {{project.title}} was not created: {{errorMessage}}
+      </div>
+      <div ng-show="created" class="alert alert-success">
+        Project {{project.title}} was successfully created!
+      </div>
+    </div>
+  </div>
+</div>

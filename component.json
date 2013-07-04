@@ -1,0 +1,59 @@
+{
+  "name": "ProjectCrowfunding",
+  "version": "0.0.1",
+  "dependencies":
+  {
+    "angular-unstable" : "1.1.5",
+    "angular-strap" : "0.7.2",
+    "angular-ui" : "0.4.0",
+    "bootstrap" : "2.3.2",
+    "bootstrap-datepicker" : "1.0.0",
+    "bootstrap-timepicker" : "0.2.3",
+    "jquery" : "1.9.1",
+    "jquery-ui" :"1.9.1",
+    "underscore" :"1.4.4",
+    "moment" : "2.0.0"
+  },
+  "exportsOverride": {
+    "angular-unstable": {
+      "js":"angular.js"
+    },
+    "angular-strap": {
+      "js":"dist/angular-strap.js"
+    },
+    "autotype" : {
+      "js":"index.js"
+    },
+    "bootstrap": {
+      "js" : "docs/assets/js/bootstrap.js",
+      "css" : "docs/assets/css/bootstrap.css",
+      "img" : "img/*.png"
+    },
+    "bootstrap-datepicker": {
+      "js" : "js/bootstrap-datepicker.js",
+      "css" : "css/datepicker.css"
+    },
+    "bootstrap-timepicker": {
+      "js" : "js/bootstrap-timepicker.js",
+      "css" : "css/bootstrap-timepicker.css"
+    },
+    "bootstrap-select": {
+      "js" : "js/bootstrap-select.js",
+      "css" : "css/bootstrap-select.css"
+    },
+    "jquery" : {
+      "js":"jquery.js"
+    },
+    "jquery-ui" : {
+      "js":"ui/jquery-ui.js",
+      "css":"themes/smoothness/jquery-ui.css",
+      "css/images":"themes/smoothness/images/*"
+    },
+    "underscore" : {
+      "js": "underscore.js"
+    },
+    "moment" : {
+      "js":"moment.js"
+    }
+  }
+}
